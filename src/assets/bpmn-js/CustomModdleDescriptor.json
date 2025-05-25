@@ -1,0 +1,38 @@
+{
+  "name": "Custom",
+  "uri": "http://custom.com/schema/1.0/bpmn",
+  "prefix": "custom",
+  "xml": {
+    "tagAlias": "lowerCase"
+  },
+  "associations": [],
+  "types": [
+    {
+      "name": "UserTask",
+      "isAbstract": true,
+      "extends": [
+        "bpmn:UserTask"
+      ],
+      "properties": [
+        {
+          "name": "assigneeOptional",
+          "isAttr": true,
+          "type": "Boolean",
+          "default": false
+        },
+        {
+          "name": "assigneeMultiple",
+          "isAttr": true,
+          "type": "Boolean",
+          "default": false
+        },
+        {
+          "name": "assigneeContent",
+          "isAttr": true,
+          "type": "String"
+        }
+      ]
+    }
+  ],
+  "emumerations": []
+}

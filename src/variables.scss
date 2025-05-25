@@ -1,0 +1,84 @@
+// 颜色变量
+$color-white: #FFFFFF !default;
+
+$color-primary: #409EFF !default;
+$color-primary-light-1: mix($color-white, $color-primary, 10%) !default;
+$color-primary-light-2: mix($color-white, $color-primary, 20%) !default;
+$color-primary-light-3: mix($color-white, $color-primary, 30%) !default;
+$color-primary-light-4: mix($color-white, $color-primary, 40%) !default;
+$color-primary-light-5: mix($color-white, $color-primary, 50%) !default;
+$color-primary-light-6: mix($color-white, $color-primary, 60%) !default;
+$color-primary-light-7: mix($color-white, $color-primary, 70%) !default;
+$color-primary-light-8: mix($color-white, $color-primary, 80%) !default;
+$color-primary-light-9: mix($color-white, $color-primary, 90%) !default;
+
+
+$color-success: #67C23A !default;
+$color-success-light-1: mix($color-white, $color-success, 10%) !default;
+$color-success-light-2: mix($color-white, $color-success, 20%) !default;
+$color-success-light-3: mix($color-white, $color-success, 30%) !default;
+$color-success-light-4: mix($color-white, $color-success, 40%) !default;
+$color-success-light-5: mix($color-white, $color-success, 50%) !default;
+$color-success-light-6: mix($color-white, $color-success, 60%) !default;
+$color-success-light-7: mix($color-white, $color-success, 70%) !default;
+$color-success-light-8: mix($color-white, $color-success, 80%) !default;
+$color-success-light-9: mix($color-white, $color-success, 90%) !default;
+
+$color-warning: #E6A23C !default;
+$color-warning-light-1: mix($color-white, $color-warning, 10%) !default;
+$color-warning-light-2: mix($color-white, $color-warning, 20%) !default;
+$color-warning-light-3: mix($color-white, $color-warning, 30%) !default;
+$color-warning-light-4: mix($color-white, $color-warning, 40%) !default;
+$color-warning-light-5: mix($color-white, $color-warning, 50%) !default;
+$color-warning-light-6: mix($color-white, $color-warning, 60%) !default;
+$color-warning-light-7: mix($color-white, $color-warning, 70%) !default;
+$color-warning-light-8: mix($color-white, $color-warning, 80%) !default;
+$color-warning-light-9: mix($color-white, $color-warning, 90%) !default;
+
+$color-danger: #F56C6C !default;
+$color-danger-light-1: mix($color-white, $color-danger, 10%) !default;
+$color-danger-light-2: mix($color-white, $color-danger, 20%) !default;
+$color-danger-light-3: mix($color-white, $color-danger, 30%) !default;
+$color-danger-light-4: mix($color-white, $color-danger, 40%) !default;
+$color-danger-light-5: mix($color-white, $color-danger, 50%) !default;
+$color-danger-light-6: mix($color-white, $color-danger, 60%) !default;
+$color-danger-light-7: mix($color-white, $color-danger, 70%) !default;
+$color-danger-light-8: mix($color-white, $color-danger, 80%) !default;
+$color-danger-light-9: mix($color-white, $color-danger, 90%) !default;
+
+$color-info: #909399 !default;
+$color-info-light-1: mix($color-white, $color-info, 10%) !default;
+$color-info-light-2: mix($color-white, $color-info, 20%) !default;
+$color-info-light-3: mix($color-white, $color-info, 30%) !default;
+$color-info-light-4: mix($color-white, $color-info, 40%) !default;
+$color-info-light-5: mix($color-white, $color-info, 50%) !default;
+$color-info-light-6: mix($color-white, $color-info, 60%) !default;
+$color-info-light-7: mix($color-white, $color-info, 70%) !default;
+$color-info-light-8: mix($color-white, $color-info, 80%) !default;
+$color-info-light-9: mix($color-white, $color-info, 90%) !default;
+
+$text-primary: #303133;
+$text-regular: #606266;
+$text-secondary: #909399;
+$text-placeholder: #C0C4CC;
+
+$border-base: #DCDFE6;
+$border-light: #E4E7ED;
+$border-lighter: #EBEEF5;
+$border-extra-light: #F2F6FC;
+
+$border-radius-base: 4px;
+$border-radius-small: 2px;
+$border-radius-circle: 100%;
+$border-radius-zero: 0;
+
+$background-color: #fbfbfb;
+
+$z-index-low: 2;
+$z-index-middle: 99;
+$z-index-high: 999;
+$z-index-max: 2147483647;
+
+$content-width: 1200px;
+
+

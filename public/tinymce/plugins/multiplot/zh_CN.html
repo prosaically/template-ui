@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+    <head>
+        <meta charset="utf-8">
+        <title>批量上传图片</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link type="text/css" rel="stylesheet" href="plugin.min.css">
+    </head>
+    <body class="multiplot flex">
+        <!-- 头部栏目 -->
+        <div class="multiplot-tips flex">
+            <img class="multiplot-tips-img"
+                 src="data:image/svg+xml;base64,PHN2ZyB0PSIxNjQ4Nzc2MTIwNjM3IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjgwMjEiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+PHBhdGggZD0iTTU3OC43NTIgMjYxLjM3Nm0tNjkuMzEyIDBhMS4wODMgMS4wODMgMCAxIDAgMTM4LjYyNCAwIDEuMDgzIDEuMDgzIDAgMSAwLTEzOC42MjQgMFoiIHAtaWQ9IjgwMjIiIGZpbGw9IiMyMDdhYjciPjwvcGF0aD48cGF0aCBkPSJNNTMzLjgyNCA3MzAuODhjMjQuNjQtOTYuODk2IDc2LjYwOC0zMTAuNzg0IDYxLjQ0LTM0MC4xNkM1OTEuNjE2IDM4My40ODggNTg0LjMyIDM3OS4zOTIgNTc1LjIzMiAzNzkuMzkyYy00MC40NDggMC0xNjguODk2IDEwMi41OTItMTk0LjI0IDEyMy4xMzZMMzc1Ljg3MiA1MDYuNzUybDAgMjguMjI0IDk0LjcyLTIzLjc0NGMtMTEuMiA1Ni4yNTYtNDEuMzQ0IDIwNS4xMi01Mi44IDIzOC4wOC05LjAyNCAyNS45ODQtOCA0OC43NjggMi45NDQgNjRDNDI2Ljc1MiA4MjEuODg4IDQzOC42NTYgODMyIDQ2MS4wNTYgODMyYzkuMjE2IDAgMTkuNTg0LTEuNzI4IDMwLjc4NC01LjEyIDYxLjE4NC0xOC43NTIgMTE0LjU2LTEwNy42NDggMTE2LjgtMTExLjQ4OGwzMi4zODQtNTQuNTI4LTUyLjI4OCAzNS45MDRDNTYxLjUzNiA3MTUuMjY0IDU0NC40NDggNzI1LjM3NiA1MzMuODI0IDczMC44OHoiIHAtaWQ9IjgwMjMiIGZpbGw9IiMyMDdhYjciPjwvcGF0aD48cGF0aCBkPSJNNTEyIDY0QzI2NC41NzYgNjQgNjQgMjY0LjU3NiA2NCA1MTJjMCAyNDcuNDg4IDIwMC41NzYgNDQ4IDQ0OCA0NDggMjQ3LjM2IDAgNDQ4LTIwMC41MTIgNDQ4LTQ0OEM5NjAgMjY0LjU3NiA3NTkuMzYgNjQgNTEyIDY0ek01MTIgODg5LjcyOGMtMjA4LjU3NiAwLTM3Ny43MjgtMTY5LjE1Mi0zNzcuNzI4LTM3Ny43MjggMC0yMDguNjQgMTY5LjE1Mi0zNzcuNzI4IDM3Ny43MjgtMzc3LjcyOCAyMDguNjQgMCAzNzcuNzI4IDE2OS4xNTIgMzc3LjcyOCAzNzcuNzI4Qzg4OS43MjggNzIwLjY0IDcyMC42NCA4ODkuNzI4IDUxMiA4ODkuNzI4eiIgcC1pZD0iODAyNCIgZmlsbD0iIzIwN2FiNyI+PC9wYXRoPjwvc3ZnPg=="
+                 alt="提示信息"/>
+            <div class="multiplot-tips-text">根据您的需要选择图片，数量控制在 20 张以下。然后点击上传等待完成，完成后点击插入即可。</div>
+        </div>
+
+        <!-- 显示区域 -->
+        <div class="multiplot-body"></div>
+
+        <!-- 底部按键 -->
+        <form class="multiplot-form" enctype="multipart/form-data">
+            <button class="multiplot-form-choose" type="button">选择图片</button>
+            <button class="multiplot-form-upload" type="button">批量上传</button>
+            <button class="multiplot-form-insert" type="button">全部插入</button>
+        </form>
+        <script type="text/javascript" src="handle.min.js"></script>
+        <script>
+            "use strict";
+
+            multiplot({
+                choose_confirm: "重选会覆盖上次，您确定吗？",
+                upload_alert: "没有可上传的图片！",
+                upload_block: "上传中...",
+                insert_alert: "没有可插入的图片！"
+            });
+        </script>
+    </body>
+</html>

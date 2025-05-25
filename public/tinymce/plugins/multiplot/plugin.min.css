@@ -1,0 +1,250 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #fff;
+    color: #606266;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, sans-serif;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+button {
+    cursor: pointer;
+    outline: none;
+    border-width: 0;
+}
+
+button:focus {
+    outline: none;
+}
+
+button {
+    font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ebebeb;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c9c9ca;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b2b2b3;
+}
+
+* {
+    scrollbar-face-color: #c7c7c7;
+    scrollbar-highlight-color: #c7c7c7;
+    scrollbar-3dlight-color: #c7c7c7;
+    scrollbar-darkshadow-color: #c7c7c7;
+    scrollbar-shadow-color: #c7c7c7;
+    scrollbar-arrow-color: #c7c7c7;
+    scrollbar-track-color: #ebebeb;
+}
+
+.flex {
+    display: flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-flex;
+}
+
+.multiplot {
+    flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+}
+
+.multiplot-tips {
+    width: 100%;
+    color: rgba(34, 47, 62, .7);
+    font-size: 14px;
+    padding: 8px 16px;
+    align-items: center;
+    -webkit-align-items: center;
+    border-bottom: 1px solid #ccc;
+    flex-shrink: 0;
+    -webkit-flex-shrink: 0;
+    margin-bottom: 8px;
+}
+
+.multiplot-tips-img {
+    flex-shrink: 0;
+    -webkit-flex-shrink: 0;
+}
+
+.multiplot-tips-text {
+    padding-left: 8px;
+    flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+}
+
+.multiplot-body {
+    flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    width: calc(100% - 4px);
+    padding-left: 8px;
+    padding-right: 4px;
+    padding-top: 8px;
+    position: relative;
+}
+
+.multiplot-body-item {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 144px;
+    height: 144px;
+    border-radius: 4px;
+    box-shadow: 0 0 4px 2px #ccc;
+    margin-left: 8px;
+    margin-bottom: 8px;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+}
+
+.multiplot-body-item:hover {
+    box-shadow: 0 0 4px 2px #207ab7;
+}
+
+.multiplot-body-item::before,
+.multiplot-body-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top-right-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    width: 34px;
+    height: 34px;
+}
+
+.multiplot-body-item::before {
+    z-index: 1;
+}
+
+.multiplot-body-item::after {
+    z-index: 2;
+    background-position: 85% 13%;
+    background-repeat: no-repeat;
+    background-size: 46%;
+}
+
+.multiplot-body-item[data-state="0"]:before,
+.multiplot-body-item[data-state="1"]:before {
+    background: linear-gradient(45deg, transparent 50%, #909399 0%);
+    background: -moz-linear-gradient(45deg, transparent 50%, #909399 0%);
+    background: -o-linear-gradient(45deg, transparent 50%, #909399 0%);
+    background: -ms-linear-gradient(45deg, transparent 50%, #909399 0%);
+    background: -webkit-linear-gradient(45deg, transparent 50%, #909399 0%);
+    background-repeat: no-repeat;
+}
+
+.multiplot-body-item[data-state="0"]:after {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB0PSIxNjQ4ODA1OTc1MjE1IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9Ijg0MCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij48cGF0aCBkPSJNODA1LjY2MDQ0NDQ1IDYwOS4wOTAzNzAzNWwtMjIwLjg0MjY2NjY3IDAgMC0zMjkuOTU1NTU1NTdjMC02MC4wNzQ2NjY2Ny00OS4xNTItMTA5LjIyNjY2NjY3LTEwOS4yMjY2NjY2Ny0xMDkuMjI2NjY2NjZMNDc1LjU5MTExMTExIDE2OS45MDgxNDgxMmMtNjAuMDc0NjY2NjcgMC0xMDkuMjI2NjY2NjcgNDkuMTUyLTEwOS4yMjY2NjY2NiAxMDkuMjI2NjY2NjZsMCA0MzcuMDIwNDQ0NDVjMCAwLjM0MTMzMzMzIDAgMC42ODI2NjY2NyAwIDEuMTM3Nzc3NzggMCAwLjM0MTMzMzMzIDAgMC42ODI2NjY2NyAwIDEuMTM3Nzc3NzdsMCAwYzAgNjAuMDc0NjY2NjcgNDkuMTUyIDEwOS4yMjY2NjY2NyAxMDkuMjI2NjY2NjYgMTA5LjIyNjY2NjY3bDMzMC4wNjkzMzMzNCAwYzYwLjA3NDY2NjY3IDAgMTA5LjIyNjY2NjY3LTQ5LjE1MiAxMDkuMjI2NjY2NjYtMTA5LjIyNjY2NjY3bDAgMEM5MTQuODg3MTExMTEgNjU4LjI0MjM3MDM1IDg2NS43MzUxMTExMSA2MDkuMDkwMzcwMzUgODA1LjY2MDQ0NDQ1IDYwOS4wOTAzNzAzNXoiIHAtaWQ9Ijg0MSIgZmlsbD0iI2ZmZmZmZiI+PC9wYXRoPjwvc3ZnPg==");
+}
+
+.multiplot-body-item[data-state="1"]:after {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJsb2FkZXItMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI0MHB4IiBoZWlnaHQ9IjQwcHgiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNDAgNDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIG9wYWNpdHk9IjAuMiIgZmlsbD0iI2ZmZiIgZD0iTTIwLjIwMSw1LjE2OWMtOC4yNTQsMC0xNC45NDYsNi42OTItMTQuOTQ2LDE0Ljk0NmMwLDguMjU1LDYuNjkyLDE0Ljk0NiwxNC45NDYsMTQuOTQ2IHMxNC45NDYtNi42OTEsMTQuOTQ2LTE0Ljk0NkMzNS4xNDYsMTEuODYxLDI4LjQ1NSw1LjE2OSwyMC4yMDEsNS4xNjl6IE0yMC4yMDEsMzEuNzQ5Yy02LjQyNSwwLTExLjYzNC01LjIwOC0xMS42MzQtMTEuNjM0IGMwLTYuNDI1LDUuMjA5LTExLjYzNCwxMS42MzQtMTEuNjM0YzYuNDI1LDAsMTEuNjMzLDUuMjA5LDExLjYzMywxMS42MzRDMzEuODM0LDI2LjU0MSwyNi42MjYsMzEuNzQ5LDIwLjIwMSwzMS43NDl6Ii8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTI2LjAxMywxMC4wNDdsMS42NTQtMi44NjZjLTIuMTk4LTEuMjcyLTQuNzQzLTIuMDEyLTcuNDY2LTIuMDEyaDB2My4zMTJoMCBDMjIuMzIsOC40ODEsMjQuMzAxLDkuMDU3LDI2LjAxMywxMC4wNDd6Ij48YW5pbWF0ZVRyYW5zZm9ybSBhdHRyaWJ1dGVUeXBlPSJ4bWwiIGF0dHJpYnV0ZU5hbWU9InRyYW5zZm9ybSIgdHlwZT0icm90YXRlIiBmcm9tPSIwIDIwIDIwIiB0bz0iMzYwIDIwIDIwIiBkdXI9IjAuNXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+PC9wYXRoPjwvc3ZnPg==");
+}
+
+.multiplot-body-item[data-state="2"]:before {
+    background: linear-gradient(45deg, transparent 50%, #67c23a 0%);
+    background: -moz-linear-gradient(45deg, transparent 50%, #67c23a 0%);
+    background: -o-linear-gradient(45deg, transparent 50%, #67c23a 0%);
+    background: -ms-linear-gradient(45deg, transparent 50%, #67c23a 0%);
+    background: -webkit-linear-gradient(45deg, transparent 50%, #67c23a 0%);
+    background-repeat: no-repeat;
+}
+
+.multiplot-body-item[data-state="2"]:after {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB0PSIxNjQ4ODA0NzkzNDczIiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjQ2NjgiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+PHBhdGggZD0iTTg5NiAyODhhMzIgMzIgMCAwIDAtNTQuNjU2LTIyLjU5Mkw0MTguNjU2IDY4OC4wOTYgMTg0Ljk5MiAzOTZsLTAuMTEyIDAuMDhhMzEuODcyIDMxLjg3MiAwIDEgMC00OS43NiAzOS44MjRsLTAuMTEyIDAuMDk2IDI1NiAzMjAgMC4xMTItMC4wOGEzMS44NzIgMzEuODcyIDAgMCAwIDQ3LjUyIDIuNjg4bDQ0Ny45NTItNDQ3Ljk1MmM1LjgyNC01LjgwOCA5LjQwOC0xMy44MDggOS40MDgtMjIuNjU2eiIgcC1pZD0iNDY2OSIgZmlsbD0iI2ZmZmZmZiI+PC9wYXRoPjwvc3ZnPg==");
+}
+
+.multiplot-body-item[data-state="-1"]:before {
+    background: linear-gradient(45deg, transparent 50%, #f56c6c 0%);
+    background: -moz-linear-gradient(45deg, transparent 50%, #f56c6c 0%);
+    background: -o-linear-gradient(45deg, transparent 50%, #f56c6c 0%);
+    background: -ms-linear-gradient(45deg, transparent 50%, #f56c6c 0%);
+    background: -webkit-linear-gradient(45deg, transparent 50%, #f56c6c 0%);
+    background-repeat: no-repeat;
+}
+
+.multiplot-body-item[data-state="-1"]:after {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB0PSIxNjQ4ODA1MTA5OTAzIiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjgxMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij48cGF0aCBkPSJNNTEyIDkwNS41Mzk2MzQ1N2E0Ni42MDMzNzc3OCA0Ni42MDMzNzc3OCAwIDEgMSA0Ni42MDMzNzc3OC00Ni42MDMzNzc3NyA0Ni42MDMzNzc3OCA0Ni42MDMzNzc3OCAwIDAgMS00Ni42MDMzNzc3OCA0Ni42MDMzNzc3N3ogbTY3LjA5NTkxODYxLTcxNC41MjAzOTkwMkw1NTguNjAzMzc3NzggNjcyLjUyMjc0NTY5YTQ2LjYwMzM3Nzc4IDQ2LjYwMzM3Nzc4IDAgMCAxLTkzLjIwNjc1NTU2IDBsLTIwLjQ5MjU0MDgzLTQ4MS41MDM1MTAxNGMtMC4xMjk0NTM4My0xLjcyMTczNTktMC4yMjAwNzE1LTMuNDY5MzYyNTctMC4yMjAwNzE1Mi01LjI0Mjg4YTY3LjMxNTk5MDEzIDY3LjMxNTk5MDEzIDAgMCAxIDEzNC42MzE5ODAyNiAwYzAgMS43NzM1MTc0My0wLjA5MDYxNzY5IDMuNTIxMTQ0MS0wLjIyMDA3MTUyIDUuMjQyODh6IiBwLWlkPSI4MTEiIGZpbGw9IiNmZmZmZmYiPjwvcGF0aD48L3N2Zz4=");
+}
+
+.multiplot-form {
+    margin-top: 8px;
+    flex-shrink: 0;
+    -webkit-flex-shrink: 0;
+    border-top: 1px solid #ccc;
+    padding: 10px 16px;
+    text-align: right;
+}
+
+.multiplot-form-choose,
+.multiplot-form-upload,
+.multiplot-form-insert {
+    line-height: 24px;
+    cursor: pointer;
+    outline: 0;
+    color: #222f3e;
+    padding: 4px 16px;
+    background-color: #f0f0f0;
+    border: 1px solid #f0f0f0;
+    border-radius: 3px;
+    margin-left: 8px;
+}
+
+.multiplot-form-choose:hover,
+.multiplot-form-upload:hover {
+    color: #222f3e;
+    background-color: #e3e3e3;
+    border-color: #e3e3e3
+}
+
+.multiplot-form-insert {
+    color: #fff;
+    background-color: #207ab7;
+    border-color: #207ab7
+}
+
+.multiplot-form-insert:hover {
+    color: #fff;
+    background-color: #1c6ca1;
+    border-color: #1c6ca1
+}

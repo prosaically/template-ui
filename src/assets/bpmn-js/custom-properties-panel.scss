@@ -1,0 +1,11 @@
+.bio-properties-panel-exhibit {
+  min-height: 32px;
+  border-radius: 2px;
+  border: 1px solid var(--input-border-color);
+  background-color: var(--input-background-color);
+  padding: 4px 6px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
